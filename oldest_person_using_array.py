@@ -34,10 +34,14 @@ while True:
                     # stops Loop 4
                         break
 
-            group_of_persons[name] = {
+            group_of_persons[person_name] = {
                 "person_name" : person_name,
                 "person_age" : person_age
             } 
 
-    except:
-        print("Incorrect input, please try again.")
+            print(group_of_persons[person_name]["person_age"])
+
+            retry = input("Insert input again? (y/n): ")
+            break
+        except:
+            print("Incorrect input, please try again.")
