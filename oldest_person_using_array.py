@@ -27,12 +27,17 @@ while True:
                     
 
             # Loop 4 - retry if age exceeds 2 digits
-        while True:    
-            person_age = input(int("Please input an age: "))
-
-                        if len(person_age) == 2:
-                        # stops Loop 4
+                while True:   
+                    person_age = input(int("Please input an age: "))
+                
+                    if len(person_age) == 2:
+                    # stops Loop 4
                         break
 
-        except:
-            print("Incorrect input, please try again.")
+            group_of_persons[name] = {
+                "person_name" : person_name,
+                "person_age" : person_age
+            } 
+
+    except:
+        print("Incorrect input, please try again.")
