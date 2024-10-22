@@ -19,12 +19,20 @@ while True:
             # Loop 3- retry if name is not 3 words
             while True:
                 person_name = input("Please input a full name: ")
-
-                if str.len(person_name) == 3:
-                # stops Loop 3
+                if len(person_name.split()) < 3:
+                    print("Please input at least 3 words.")
+                else:
                     break
-                # Loop 4 - retry if age exceeds 2 digits
-                while True:    
-            
+                   # stops Loop 3
+                    
+
+            # Loop 4 - retry if age exceeds 2 digits
+        while True:    
+            person_age = input(int("Please input an age: "))
+
+                        if len(person_age) == 2:
+                        # stops Loop 4
+                        break
+
         except:
             print("Incorrect input, please try again.")
