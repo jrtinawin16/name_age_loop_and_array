@@ -45,3 +45,8 @@ while True:
             break
         except:
             print("Incorrect input, please try again.")
+    
+    if retry == "n":
+        break
+    elif retry != "y":
+        print("Invalid answer, please try again.")
