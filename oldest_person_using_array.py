@@ -13,13 +13,19 @@ group_of_persons = {}
 while True:
     # Loop 2 - automatically retry if input has error
     while True:
-        try:
-            person_name = input("Please input a name: ")
+            # Loop 3- retry if name is not 3 words
             
-            # Loop 3 - retry if age is not / exceed 2 digits
-            while True: 
-                person_age = int(input("Please input an age: "))
+            person_name = input("Please input a full name: ")
 
-                if len(person_age) <= 2:
-                    # stops Loop 3
-                    break
+            if str.len() == 3:
+                # stops Loop 3
+
+            
+                # Loop 4 - retry if age is not / exceed 2 digits
+                while True: 
+                    person_age = int(input("Please input an age: "))
+
+                    if len(person_age) <= 2:
+                        # stops Loop 4
+                        break
+                
