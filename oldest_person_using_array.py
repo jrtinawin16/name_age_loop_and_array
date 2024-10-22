@@ -14,7 +14,12 @@ while True:
     # Loop 2 - automatically retry if input has error
     while True:
         try:
-            name = input("Please input a name: ")
+            person_name = input("Please input a name: ")
             
             # Loop 3 - retry if age is not / exceed 2 digits
-            while True:  
+            while True: 
+                person_age = int(input("Please input an age: "))
+
+                if len(person_age) <= 2:
+                    # stops Loop 3
+                    break
