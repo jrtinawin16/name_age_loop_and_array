@@ -34,11 +34,10 @@ while True:
                     break
                     
             group_of_persons[person_name] = {
+                "person_name" : person_name,
                 "person_age" : person_age
             } 
-
-            print(group_of_persons[person_name]["person_age"])
-
+            
             retry = input("Retry? (y/n): ")
             break
         except:
@@ -49,3 +48,8 @@ while True:
         break
     elif retry != "y":
         print("Invalid answer, please try again.")
+        
+print("The oldest person is: ")
+print(group_of_persons[person_name]["person_name"])
+print("with an age of: ")
+print(group_of_persons[person_age]["person_age"])
