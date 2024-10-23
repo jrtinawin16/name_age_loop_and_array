@@ -26,12 +26,12 @@ while True:
                 except: 
                     continue         
             # Loop 4 - retry if age exceeds 2 digits
-                while True: 
-                    person_age = int(input("Please input an age: "))
+            while True: 
+                person_age = int(input("Please input an age: "))
 
-                    if len(str(person_age)) == 2:
+                if len(str(person_age)) == 2:
                     # stops Loop 4
-                        break
+                    break
                     
             group_of_persons[person_name] = {
                 "person_age" : person_age
