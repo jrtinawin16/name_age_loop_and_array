@@ -36,7 +36,7 @@ while True:
             while True: 
                 person_age = int(input("Please input an age: "))
 
-                if len(str(person_age)) == 2:
+                if len(str(person_age)) <= 2:
                     # stops Loop 4
                     break
                     
@@ -63,7 +63,7 @@ def find_highest(group_of_persons):
         if entry ["person_age"] > oldest_age:
             oldest_age = entry["person_age"]
             oldest_entry = entry
-    
+
     return oldest_entry
 
 oldest_entry = find_highest(group_of_persons)
