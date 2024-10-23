@@ -29,7 +29,7 @@ while True:
                 while True: 
                     person_age = int(input("Please input an age: "))
 
-                    if len(person_age) == 2:
+                    if len(str(person_age)) == 2:
                     # stops Loop 4
                         break
                     
