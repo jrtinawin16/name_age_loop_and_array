@@ -7,7 +7,14 @@
 # store name and age into array
 # enter prompt if user wants to enter another input
     # if yes, ask user again for input
-    # if no, display name and age of oldest person
+    # if no, calculate for oldest age
+        # set oldest age to 0
+        # set oldest entry to ages inside of array
+        # if the inserted age is greater than oldest age
+            # define new oldest_age to inserted age
+            # define inserted age as oldest entry
+        # return oldest entry
+        # display name and age of oldest person
 
 group_of_persons = {}
 
@@ -48,8 +55,19 @@ while True:
         break
     elif retry != "y":
         print("Invalid answer, please try again.")
-        
-print("The oldest person is: ")
-print(group_of_persons[person_name]["person_name"])
-print("with an age of: ")
-print(group_of_persons[person_age]["person_age"])
+
+def find_highest(group_of_persons): 
+    oldest_age = 0
+    oldest_entry = {}
+    for entry in group_of_persons.values():
+        if entry ["person_age"] > oldest_age:
+            oldest_age = entry["person_age"]
+            oldest_entry = entry
+    
+    return oldest_entry
+
+oldest_entry = find_highest(group_of_persons)
+print("The oldest person is:")
+print(oldest_entry["person_name"])
+print("with an age of:")
+print(oldest_entry["person_age"])
